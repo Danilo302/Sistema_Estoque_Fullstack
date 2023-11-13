@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/trash.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/pen.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/dollar.css' rel='stylesheet'>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <span>Cadastro de produto</span>
+            <button onclick="openModal()" id="novo">Adiciona</i></button>
+        </div>
+    </div>
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th class="acao">Ação </th>
+
+
+
+
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="modalContainer">
+        <div class="modal">
+            <form>
+                <label for="prod">Produto</label>
+                <input id="prod" type="text" required />
+
+                <label for="qtd">Quantidade</label>
+                <input id="qtd" type="number" required />
+
+                <label for="preco">Preço</label>
+                <input id="preco" type="number" required />
+
+                <div>
+                    <button type="submit" id="btsalvar" onclick="salvar()">Salvar</button>
+                    <button type="button" id="btcancelar" onclick="FecharModal(modal)">Cancelar</button>
+                
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modalDelete">
+        <div class="modal">
+            <form>
+                <label>Tem certeza que deseja excluir todo o estoque do produto?</label>
+                <div><button type="submit" id="btdelete" >confirmar</button>
+                    <button type="button" id="btcancelar" onclick="FecharModal(modalDel)">Cancelar</button>
+                
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="modalAlterar">
+        <div class="modal">
+            <form>
+                <label for="Aprod">Produto</label>
+                <input id="Aprod" type="text" required />
+
+                <label for="Aqtd">Quantidade</label>
+                <input id="Aqtd" type="number" required />
+
+                <label for="Apreco">Preço</label>
+                <input id="Apreco" type="number" required />
+
+                <div>
+                    <button type="submit" id="btalterar" >Salvar alteração</button>
+                    <button type="button" id="btcancelar" onclick="FecharModal(modalAlterar)">Cancelar</button>
+                
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
